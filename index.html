@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>CSDP4VO Quest — Cybersecurity and Data Protection</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="app">
+  <!-- ───────── top bar ───────── -->
+  <header class="topbar" id="topbar">
+    <button class="stat stat-streak" id="statStreak" title="Daily streak">
+      <span class="ico">🔥</span><span id="streakVal">0</span>
+    </button>
+    <button class="stat stat-gems" id="statGems" title="Gems">
+      <span class="ico">💎</span><span id="gemsVal">0</span>
+    </button>
+    <button class="stat stat-hearts" id="statHearts" title="Hearts">
+      <span class="ico">❤️</span><span id="heartsVal">5</span>
+    </button>
+    <button class="stat stat-xp" id="statXp" title="Total XP">
+      <span class="ico">⚡</span><span id="xpVal">0</span>
+    </button>
+  </header>
+
+  <main id="view"></main>
+
+  <!-- ───────── bottom nav ───────── -->
+  <nav class="tabbar" id="tabbar">
+    <button data-tab="learn" class="active"><span>🗺️</span>Learn</button>
+    <button data-tab="practice"><span>⚔️</span>Practice</button>
+    <button data-tab="ranks"><span>🏆</span>Ranks</button>
+    <button data-tab="profile"><span>👤</span>Profile</button>
+  </nav>
+</div>
+
+<!-- ───────── celebration overlay ───────── -->
+<div class="celebrate" id="celebrate" hidden style="display:none">
+  <div class="confetti" id="confetti"></div>
+  <div class="celebrate-card">
+    <div class="celebrate-emoji" id="celEmoji">🎉</div>
+    <h2 id="celTitle">Lesson complete!</h2>
+    <div class="cel-stats">
+      <div><span id="celXp">15</span><small>XP earned</small></div>
+      <div><span id="celAcc">100%</span><small>accuracy</small></div>
+      <div><span id="celStreak">1</span><small>day streak</small></div>
+    </div>
+    <button class="btn btn-green" id="celContinue">Continue</button>
+  </div>
+</div>
+
+<script src="course.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
